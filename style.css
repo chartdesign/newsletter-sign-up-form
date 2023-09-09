@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap");
+
+:root {
+  --darkSlateGray: hsl(234, 29%, 20%);
+  --lightSlateGray: hsl(234, 29%, 35%);
+  --chacoalGray: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: var(--lightSlateGray);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style-image: url("./assets/images/icon-list.svg");
+  padding-left: 1.5rem;
+  line-height: 2.5rem;
+}
+
+li {
+  padding-left: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.signUp-form {
+  padding: 30px;
+  max-width: 440px;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+label {
+  font-weight: 700;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--darkSlateGray);
+  color: var(--white);
+  border: none;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(244, 109, 109, 1) 0%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.mobile-img {
+  padding: 0;
+}
+
+/* success message */
+.success-msg {
+  padding: 2rem;
+}
+.success-msg p {
+  line-height: 1.5rem;
+  color: var(--lightSlateGray);
+}
+
+#post-email {
+  font-weight: bolder;
+  font-size: 1.1rem;
+  color: var(--darkSlateGray);
+}
+
+@media screen and (max-width: 812px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .sign-up-img {
+    display: none;
+  }
+  .signUp-form {
+    max-width: 375px;
+  }
+  ul {
+    line-height: 1.5rem;
+  }
+  .success-msg {
+    padding: 2rem;
+    max-width: 375px;
+  }
+}
+
+@media screen and (min-width: 812px) {
+  .mobile-img {
+    display: none;
+  }
+}
